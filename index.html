@@ -1,0 +1,1732 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91逼特逼网 - 品牌官方视频门户,专注真实影像内容</title>
+<meta name="description" content="91逼特逼网官方网站，作为原创视频内容品牌，深耕真实影像与创作者社区，为观众提供高清正版精品内容与企业级视频服务。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23152a3a'/%3E%3Cpath d='M24 20 L46 32 L24 44 Z' fill='%23ff6b4a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bt-navy:#12212e;
+  --bt-navy-2:#1b3244;
+  --bt-coral:#ff6b4a;
+  --bt-coral-soft:#ffd9cf;
+  --bt-gold:#f2b73f;
+  --bt-ice:#eef3f6;
+  --bt-line:#d8e2e8;
+  --bt-text:#1c2b36;
+  --bt-muted:#5c7280;
+  --bt-white:#ffffff;
+  --bt-radius:16px;
+  --bt-shadow:0 10px 30px rgba(18,33,46,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  color:var(--bt-text);
+  background:var(--bt-ice);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+ul{list-style:none;}
+
+/* ============ 吸顶区 ============ */
+.bt-sticky-wrap{position:sticky;top:0;z-index:80;}
+.bt-notice-bar{
+  background:linear-gradient(90deg,var(--bt-navy),var(--bt-navy-2) 60%,#24435a);
+  color:#dce8ef;
+  font-size:13px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:8px 20px;
+  overflow:hidden;
+}
+.bt-notice-badge{
+  flex:0 0 auto;
+  background:var(--bt-coral);
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+  padding:2px 9px;
+  border-radius:20px;
+}
+.bt-notice-track{overflow:hidden;flex:1;}
+.bt-notice-move{
+  display:inline-flex;
+  gap:44px;
+  white-space:nowrap;
+  animation:bt-scroll-left 26s linear infinite;
+  padding-left:10px;
+}
+.bt-notice-move span{opacity:.92;}
+.bt-notice-move b{color:var(--bt-gold);font-weight:600;}
+@keyframes bt-scroll-left{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+/* ============ 页头 ============ */
+.bt-header{
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--bt-line);
+}
+.bt-header-in{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+  height:68px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+.bt-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  font-size:19px;
+  letter-spacing:.5px;
+  color:var(--bt-navy);
+  flex:0 0 auto;
+}
+.bt-logo-mark{
+  width:36px;height:36px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--bt-navy),#2a5872);
+  display:grid;place-items:center;
+  flex:0 0 auto;
+}
+.bt-logo-mark svg{width:18px;height:18px;}
+.bt-logo em{font-style:normal;color:var(--bt-coral);}
+.bt-nav{display:flex;align-items:center;gap:4px;margin-left:8px;flex:1;}
+.bt-nav a{
+  font-size:14.5px;
+  color:#33424e;
+  padding:8px 12px;
+  border-radius:9px;
+  transition:.2s;
+  white-space:nowrap;
+}
+.bt-nav a:hover{background:var(--bt-ice);color:var(--bt-coral);}
+.bt-search{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  background:var(--bt-ice);
+  border:1px solid var(--bt-line);
+  border-radius:22px;
+  padding:4px 5px 4px 14px;
+  width:230px;
+  flex:0 0 auto;
+}
+.bt-search input{
+  border:none;outline:none;background:transparent;
+  font-size:13.5px;width:100%;color:var(--bt-text);
+}
+.bt-search button{
+  background:var(--bt-navy);
+  color:#fff;
+  border-radius:18px;
+  padding:5px 13px;
+  font-size:13px;
+  transition:.2s;
+}
+.bt-search button:hover{background:var(--bt-coral);}
+.bt-burger{
+  display:none;
+  width:40px;height:40px;
+  border-radius:10px;
+  background:var(--bt-ice);
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  flex:0 0 auto;
+}
+.bt-burger i{display:block;width:18px;height:2px;background:var(--bt-navy);border-radius:2px;}
+.bt-search-hint{
+  position:absolute;
+  top:64px;
+  right:20px;
+  background:#fff;
+  border:1px solid var(--bt-line);
+  box-shadow:var(--bt-shadow);
+  border-radius:12px;
+  font-size:13px;
+  padding:9px 14px;
+  color:var(--bt-muted);
+  display:none;
+  z-index:90;
+}
+.bt-search-hint.show{display:block;}
+.bt-header-pos{position:relative;}
+
+/* ============ 通用容器 ============ */
+.bt-section{max-width:1200px;margin:0 auto;padding:64px 20px;}
+.bt-sec-head{margin-bottom:34px;max-width:760px;}
+.bt-eyebrow{
+  display:inline-block;
+  font-size:12.5px;
+  letter-spacing:2.5px;
+  font-weight:700;
+  color:var(--bt-coral);
+  margin-bottom:10px;
+}
+.bt-eyebrow::before{content:"— ";}
+.bt-h2{
+  font-size:clamp(23px,3vw,32px);
+  font-weight:800;
+  letter-spacing:.4px;
+  color:var(--bt-navy);
+  line-height:1.35;
+}
+.bt-sec-sub{color:var(--bt-muted);font-size:15px;margin-top:10px;}
+
+/* ============ 首屏 ============ */
+.bt-hero{
+  background:
+    radial-gradient(circle at 82% 12%,rgba(255,107,74,.16),transparent 46%),
+    radial-gradient(circle at 6% 92%,rgba(242,183,63,.14),transparent 44%),
+    linear-gradient(160deg,#0f1d29 0%,#16293a 55%,#1d394d 100%);
+  color:#e8f0f5;
+  padding:64px 20px 70px;
+}
+.bt-hero-in{
+  max-width:1200px;margin:0 auto;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:52px;
+  align-items:center;
+}
+.bt-hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,107,74,.16);
+  border:1px solid rgba(255,107,74,.4);
+  color:#ffb7a5;
+  font-size:12.5px;
+  padding:5px 14px;
+  border-radius:20px;
+  margin-bottom:20px;
+  letter-spacing:.6px;
+}
+.bt-hero-tag b{color:#ffd9cf;font-weight:700;}
+.bt-hero h1{
+  font-size:clamp(38px,6.4vw,66px);
+  font-weight:900;
+  letter-spacing:1px;
+  line-height:1.1;
+  background:linear-gradient(96deg,#ffffff 20%,#ffc9ba 60%,#f2b73f);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  margin-bottom:6px;
+}
+.bt-hero-claim{
+  font-size:clamp(17px,2.2vw,22px);
+  font-weight:600;
+  color:#ffd9cf;
+  margin:14px 0 18px;
+  letter-spacing:.5px;
+}
+.bt-hero-intro{font-size:14.5px;color:#b9ccd8;max-width:530px;}
+.bt-hero-stats{
+  display:flex;gap:34px;flex-wrap:wrap;
+  margin:30px 0 30px;
+}
+.bt-hero-stat b{
+  display:block;
+  font-size:clamp(24px,3.4vw,32px);
+  font-weight:900;
+  color:#fff;
+  line-height:1.15;
+  font-variant-numeric:tabular-nums;
+}
+.bt-hero-stat b i{font-style:normal;font-size:15px;color:var(--bt-gold);margin-left:2px;}
+.bt-hero-stat span{font-size:12.5px;color:#8fa8b8;letter-spacing:.6px;}
+.bt-hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.bt-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 26px;
+  border-radius:30px;
+  font-size:14.5px;
+  font-weight:600;
+  transition:.22s;
+  white-space:nowrap;
+}
+.bt-btn-primary{background:var(--bt-coral);color:#fff;box-shadow:0 8px 22px rgba(255,107,74,.36);}
+.bt-btn-primary:hover{transform:translateY(-2px);background:#ff7d5f;}
+.bt-btn-ghost{border:1px solid rgba(255,255,255,.32);color:#e8f0f5;}
+.bt-btn-ghost:hover{background:rgba(255,255,255,.1);}
+.bt-hero-visual{position:relative;}
+.bt-hero-cover{
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 28px 60px rgba(0,0,0,.42);
+  border:1px solid rgba(255,255,255,.14);
+  position:relative;
+  aspect-ratio:16/10;
+}
+.bt-hero-cover img{width:100%;height:100%;object-fit:cover;}
+.bt-play-badge{
+  position:absolute;inset:0;
+  display:grid;place-items:center;
+  background:linear-gradient(180deg,transparent 40%,rgba(8,16,24,.7));
+  pointer-events:none;
+}
+.bt-play-badge span{
+  width:64px;height:64px;border-radius:50%;
+  background:rgba(255,107,74,.92);
+  display:grid;place-items:center;
+  box-shadow:0 0 0 8px rgba(255,107,74,.18);
+}
+.bt-play-badge svg{width:22px;height:22px;fill:#fff;margin-left:3px;}
+.bt-hero-cover-cap{
+  position:absolute;left:18px;bottom:16px;right:18px;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:10px;color:#fff;
+}
+.bt-hero-cover-cap strong{font-size:15px;font-weight:700;display:block;}
+.bt-hero-cover-cap small{font-size:12px;color:#cfe0e9;}
+.bt-pill{
+  font-size:11.5px;padding:3px 10px;border-radius:14px;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.3);
+  flex:0 0 auto;
+}
+.bt-hero-mini{
+  position:absolute;right:-14px;bottom:-30px;
+  width:200px;border-radius:14px;overflow:hidden;
+  border:2px solid #213c4f;box-shadow:0 18px 40px rgba(0,0,0,.4);
+  background:#16293a;
+}
+.bt-hero-mini img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.bt-hero-mini p{font-size:12px;color:#c8dae4;padding:7px 10px 9px;}
+
+/* ============ 关键词解析长文 ============ */
+.bt-about{background:#fff;}
+.bt-about-grid{
+  display:grid;grid-template-columns:1fr 340px;gap:46px;align-items:start;
+}
+.bt-article p{margin-bottom:16px;font-size:15px;color:#3b4d59;text-align:justify;}
+.bt-article h3{
+  font-size:18px;font-weight:800;color:var(--bt-navy);
+  margin:26px 0 10px;padding-left:14px;position:relative;
+}
+.bt-article h3::before{
+  content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;
+  border-radius:3px;background:linear-gradient(var(--bt-coral),var(--bt-gold));
+}
+.bt-article strong{color:var(--bt-coral);font-weight:700;}
+.bt-aside-card{
+  background:linear-gradient(180deg,#f7fbfd,#eef4f8);
+  border:1px solid var(--bt-line);
+  border-radius:var(--bt-radius);
+  padding:24px;
+  margin-bottom:18px;
+}
+.bt-aside-card h4{font-size:15px;font-weight:800;color:var(--bt-navy);margin-bottom:14px;letter-spacing:.5px;}
+.bt-aside-card li{
+  font-size:13.5px;color:#45596a;padding:9px 0;
+  border-bottom:1px dashed #d5e0e7;display:flex;justify-content:space-between;gap:10px;
+}
+.bt-aside-card li:last-child{border-bottom:none;}
+.bt-aside-card li span:last-child{color:var(--bt-coral);font-weight:700;flex:0 0 auto;}
+.bt-aside-note{font-size:13px;color:var(--bt-muted);line-height:1.8;}
+
+/* ============ 焦点视频 ============ */
+.bt-focus{background:var(--bt-ice);}
+.bt-focus-grid{
+  display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:22px;
+}
+.bt-card{
+  background:#fff;border-radius:var(--bt-radius);overflow:hidden;
+  border:1px solid #e4ecf1;box-shadow:0 2px 10px rgba(18,33,46,.04);
+  transition:transform .24s,box-shadow .24s;
+  display:flex;flex-direction:column;
+}
+.bt-card:hover{transform:translateY(-5px);box-shadow:var(--bt-shadow);}
+.bt-card-cover{position:relative;overflow:hidden;aspect-ratio:16/9;background:#20374a;}
+.bt-card-cover img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.bt-card:hover .bt-card-cover img{transform:scale(1.05);}
+.bt-card-tag{
+  position:absolute;left:10px;top:10px;
+  font-size:11px;font-weight:700;letter-spacing:.6px;
+  background:rgba(18,33,46,.82);color:#fff;
+  padding:3px 9px;border-radius:12px;
+  backdrop-filter:blur(4px);
+}
+.bt-card-dur{
+  position:absolute;right:10px;bottom:10px;
+  font-size:11.5px;color:#fff;background:rgba(18,33,46,.78);
+  padding:2px 8px;border-radius:8px;
+}
+.bt-cover-play{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:linear-gradient(180deg,transparent 55%,rgba(10,20,28,.34));
+}
+.bt-cover-play i{
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.9);
+  display:grid;place-items:center;
+  opacity:0;transform:scale(.8);transition:.26s;
+}
+.bt-card:hover .bt-cover-play i{opacity:1;transform:scale(1);}
+.bt-cover-play i svg{width:15px;height:15px;fill:var(--bt-coral);margin-left:2px;}
+.bt-card-body{padding:15px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1;}
+.bt-card-title{font-size:15px;font-weight:700;color:var(--bt-navy);line-height:1.45;}
+.bt-card-big .bt-card-title{font-size:19px;line-height:1.4;}
+.bt-card-desc{font-size:13px;color:var(--bt-muted);line-height:1.65;flex:1;}
+.bt-card-meta{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  font-size:12.5px;color:#75899a;margin-top:4px;
+}
+.bt-author{display:flex;align-items:center;gap:7px;min-width:0;}
+.bt-avatar{
+  width:24px;height:24px;border-radius:50%;
+  display:grid;place-items:center;
+  font-size:11px;font-weight:800;color:#fff;flex:0 0 auto;
+}
+.bt-author span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.bt-card-ops{display:flex;gap:12px;flex:0 0 auto;}
+.bt-op{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:12.5px;color:#75899a;transition:.18s;
+}
+.bt-op svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;}
+.bt-op.liked{color:var(--bt-coral);}
+.bt-op.liked svg{fill:var(--bt-coral);stroke:var(--bt-coral);}
+.bt-op.saved{color:var(--bt-gold);}
+.bt-op.saved svg{fill:var(--bt-gold);stroke:var(--bt-gold);}
+.bt-op:hover{color:var(--bt-coral);}
+.bt-card-col{display:grid;gap:22px;grid-template-rows:1fr 1fr;}
+
+/* ============ 专题 ============ */
+.bt-topics{background:#fff;}
+.bt-topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.bt-topic{
+  position:relative;border-radius:var(--bt-radius);overflow:hidden;
+  aspect-ratio:3/3.6;
+  color:#fff;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  border:1px solid #e2ebf0;
+}
+.bt-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.bt-topic::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,20,28,.05) 30%,rgba(10,20,28,.86));
+}
+.bt-topic-in{position:relative;z-index:2;padding:18px;}
+.bt-topic-in .bt-pill{margin-bottom:9px;background:rgba(255,107,74,.9);border:none;}
+.bt-topic-in h3{font-size:16.5px;font-weight:800;line-height:1.4;}
+.bt-topic-in p{font-size:12.5px;color:#c9d9e2;margin-top:6px;line-height:1.6;}
+.bt-topic-status{
+  margin-top:10px;font-size:11.5px;color:#ffd9cf;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.bt-topic-status::before{content:"";width:6px;height:6px;border-radius:50%;background:#ffd9cf;}
+
+/* ============ 创作者 ============ */
+.bt-creators{background:var(--bt-ice);}
+.bt-creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.bt-creator{
+  background:#fff;border-radius:var(--bt-radius);padding:22px;
+  border:1px solid #e4ecf1;box-shadow:0 2px 10px rgba(18,33,46,.04);
+  transition:.24s;
+  display:flex;flex-direction:column;gap:12px;
+}
+.bt-creator:hover{transform:translateY(-4px);box-shadow:var(--bt-shadow);}
+.bt-creator-top{display:flex;align-items:center;gap:13px;}
+.bt-avatar-lg{
+  width:52px;height:52px;border-radius:16px;
+  display:grid;place-items:center;
+  font-size:20px;font-weight:800;color:#fff;flex:0 0 auto;
+}
+.bt-creator-top h3{font-size:16px;font-weight:800;color:var(--bt-navy);}
+.bt-creator-top small{font-size:12px;color:var(--bt-coral);font-weight:600;letter-spacing:.4px;}
+.bt-creator p{font-size:13px;color:var(--bt-muted);line-height:1.7;flex:1;}
+.bt-creator-nums{display:flex;gap:20px;font-size:12.5px;color:#7b8e9c;border-top:1px dashed #e2eaef;padding-top:12px;}
+.bt-creator-nums b{color:var(--bt-navy);font-weight:800;font-size:14px;}
+.bt-creator-nums button{font-size:12.5px;color:var(--bt-coral);font-weight:700;margin-left:auto;}
+.bt-creator-nums button:hover{text-decoration:underline;}
+
+/* ============ 榜单 + 评价 ============ */
+.bt-community{background:#fff;}
+.bt-community-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:46px;align-items:start;}
+.bt-rank-list{background:linear-gradient(180deg,#f7fbfd,#eef4f8);border:1px solid var(--bt-line);border-radius:var(--bt-radius);padding:10px 22px 20px;}
+.bt-rank-list h3{font-size:16px;font-weight:800;color:var(--bt-navy);padding:14px 0 8px;letter-spacing:.5px;}
+.bt-rank-item{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 0;border-bottom:1px dashed #d8e3ea;
+}
+.bt-rank-item:last-child{border-bottom:none;}
+.bt-rank-no{
+  width:24px;height:24px;border-radius:8px;flex:0 0 auto;
+  display:grid;place-items:center;
+  font-size:12px;font-weight:800;color:#fff;background:#9fb4c2;
+}
+.bt-rank-item:nth-child(2) .bt-rank-no{background:var(--bt-coral);}
+.bt-rank-item:nth-child(3) .bt-rank-no{background:var(--bt-gold);color:#5a3d00;}
+.bt-rank-item:nth-child(4) .bt-rank-no{background:#4a7791;}
+.bt-rank-name{font-size:13.5px;color:#33424e;flex:1;line-height:1.5;}
+.bt-rank-hot{font-size:12px;color:var(--bt-coral);font-weight:700;flex:0 0 auto;}
+.bt-review{background:#fff;border:1px solid #e4ecf1;border-radius:var(--bt-radius);padding:22px;margin-bottom:16px;box-shadow:0 2px 10px rgba(18,33,46,.04);}
+.bt-review-top{display:flex;align-items:center;gap:11px;margin-bottom:10px;}
+.bt-review-top h4{font-size:14px;font-weight:700;color:var(--bt-navy);}
+.bt-review-top small{font-size:11.5px;color:#93a5b1;display:block;}
+.bt-stars{color:var(--bt-gold);font-size:12px;letter-spacing:1px;margin-left:auto;}
+.bt-review p{font-size:13.5px;color:#425663;line-height:1.75;}
+
+/* ============ 创作灵感 ============ */
+.bt-inspire{background:linear-gradient(180deg,#fff,#f3f8fb);border-top:1px solid #e6eef3;border-bottom:1px solid #e6eef3;}
+.bt-inspire-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.bt-inspire-card{
+  background:#fff;border-radius:var(--bt-radius);padding:24px;
+  border:1px solid #e4ecf1;position:relative;overflow:hidden;
+}
+.bt-inspire-card::before{
+  content:"";position:absolute;left:0;top:0;width:100%;height:4px;
+  background:linear-gradient(90deg,var(--bt-coral),var(--bt-gold));
+}
+.bt-inspire-card h3{font-size:16px;font-weight:800;color:var(--bt-navy);margin-bottom:10px;}
+.bt-inspire-card p{font-size:13.5px;color:var(--bt-muted);line-height:1.75;margin-bottom:14px;}
+.bt-inspire-card ul li{
+  font-size:13px;color:#3b4d59;padding:6px 0 6px 18px;position:relative;
+}
+.bt-inspire-card ul li::before{
+  content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:2px;
+  background:var(--bt-coral);transform:rotate(45deg);
+}
+.bt-chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.bt-chip{
+  font-size:12.5px;padding:4px 12px;border-radius:16px;
+  background:var(--bt-ice);border:1px solid var(--bt-line);color:#45596a;
+  transition:.18s;
+}
+.bt-chip:hover{background:var(--bt-coral);border-color:var(--bt-coral);color:#fff;}
+
+/* ============ 品牌动态 ============ */
+.bt-news{background:#fff;}
+.bt-news-list{display:grid;gap:14px;}
+.bt-news-item{
+  display:grid;grid-template-columns:92px 1fr auto;gap:18px;align-items:center;
+  padding:18px 20px;border:1px solid #e4ecf1;border-radius:14px;
+  background:linear-gradient(90deg,#fbfdfe,#fff);
+  transition:.2s;
+}
+.bt-news-item:hover{border-color:var(--bt-coral-soft);box-shadow:0 6px 20px rgba(18,33,46,.06);}
+.bt-news-date{font-size:12.5px;color:var(--bt-coral);font-weight:800;letter-spacing:.4px;}
+.bt-news-item h3{font-size:15px;font-weight:700;color:var(--bt-navy);margin-bottom:3px;}
+.bt-news-item p{font-size:13px;color:var(--bt-muted);}
+.bt-news-more{font-size:12.5px;color:#93a5b1;flex:0 0 auto;}
+
+/* ============ FAQ + 联系 ============ */
+.bt-faq{background:var(--bt-ice);}
+.bt-faq-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:44px;align-items:start;}
+.bt-faq details{
+  background:#fff;border:1px solid #e4ecf1;border-radius:12px;
+  margin-bottom:11px;overflow:hidden;
+}
+.bt-faq summary{
+  cursor:pointer;list-style:none;
+  padding:15px 20px;font-size:14.5px;font-weight:700;color:var(--bt-navy);
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.bt-faq summary::-webkit-details-marker{display:none;}
+.bt-faq summary::after{content:"+";font-size:19px;color:var(--bt-coral);font-weight:400;line-height:1;transition:.2s;}
+.bt-faq details[open] summary::after{transform:rotate(45deg);}
+.bt-faq details p{padding:0 20px 16px;font-size:13.5px;color:var(--bt-muted);line-height:1.78;}
+.bt-contact-card{
+  background:linear-gradient(160deg,var(--bt-navy),#23445a);
+  border-radius:var(--bt-radius);padding:30px;color:#e2edf3;
+}
+.bt-contact-card h3{font-size:18px;font-weight:800;margin-bottom:8px;}
+.bt-contact-card > p{font-size:13.5px;color:#a9c1cf;margin-bottom:20px;line-height:1.75;}
+.bt-contact-line{
+  display:flex;justify-content:space-between;gap:12px;
+  font-size:13px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.16);
+}
+.bt-contact-line span:first-child{color:#93aebf;}
+.bt-contact-line span:last-child{font-weight:600;color:#fff;word-break:break-all;}
+.bt-contact-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:22px;}
+.bt-contact-actions .bt-btn{padding:10px 20px;font-size:13.5px;}
+.bt-btn-light{background:#fff;color:var(--bt-navy);}
+.bt-btn-light:hover{background:var(--bt-coral-soft);}
+.bt-btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff;}
+.bt-btn-outline:hover{background:rgba(255,255,255,.12);}
+
+/* ============ 页脚 ============ */
+.bt-footer{background:#0e1b25;color:#8ba3b3;padding:52px 20px 28px;}
+.bt-footer-in{max-width:1200px;margin:0 auto;}
+.bt-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px;}
+.bt-footer-brand h3{font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:.5px;}
+.bt-footer-brand h3 em{font-style:normal;color:var(--bt-coral);}
+.bt-footer-brand p{font-size:13px;line-height:1.8;max-width:300px;}
+.bt-footer-col h4{font-size:14px;font-weight:700;color:#dde9f0;margin-bottom:13px;}
+.bt-footer-col a{display:block;font-size:13px;padding:5px 0;color:#8ba3b3;transition:.18s;}
+.bt-footer-col a:hover{color:var(--bt-coral);}
+.bt-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.09);
+  padding-top:22px;font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.bt-footer-bottom span{color:#6d8798;}
+
+/* ============ 弹窗 & Toast ============ */
+.bt-modal-mask{
+  position:fixed;inset:0;background:rgba(10,20,28,.62);
+  display:none;place-items:center;z-index:200;padding:20px;
+  backdrop-filter:blur(3px);
+}
+.bt-modal-mask.show{display:grid;}
+.bt-modal{
+  background:#fff;border-radius:18px;max-width:440px;width:100%;
+  padding:28px;box-shadow:0 30px 70px rgba(0,0,0,.35);position:relative;
+  max-height:86vh;overflow:auto;
+}
+.bt-modal h3{font-size:18px;font-weight:800;color:var(--bt-navy);margin-bottom:6px;}
+.bt-modal .bt-modal-sub{font-size:13px;color:var(--bt-muted);margin-bottom:18px;}
+.bt-modal-close{
+  position:absolute;right:14px;top:12px;width:30px;height:30px;border-radius:50%;
+  background:var(--bt-ice);color:#5c7280;font-size:16px;display:grid;place-items:center;
+}
+.bt-modal-close:hover{background:var(--bt-coral-soft);color:var(--bt-coral);}
+.bt-form-row{margin-bottom:13px;}
+.bt-form-row label{display:block;font-size:12.5px;font-weight:700;color:#45596a;margin-bottom:5px;}
+.bt-form-row input,.bt-form-row textarea,.bt-form-row select{
+  width:100%;border:1px solid var(--bt-line);border-radius:9px;
+  padding:9px 12px;font-size:13.5px;font-family:inherit;color:var(--bt-text);
+  background:#fbfdfe;outline:none;transition:.18s;resize:vertical;
+}
+.bt-form-row input:focus,.bt-form-row textarea:focus,.bt-form-row select:focus{border-color:var(--bt-coral);background:#fff;}
+.bt-form-submit{
+  width:100%;background:var(--bt-coral);color:#fff;border-radius:10px;
+  padding:11px;font-size:14px;font-weight:700;margin-top:6px;transition:.2s;
+}
+.bt-form-submit:hover{background:#ff7d5f;}
+.bt-share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+.bt-share-row button{
+  flex:1 1 30%;background:var(--bt-ice);border:1px solid var(--bt-line);
+  border-radius:10px;padding:11px 6px;font-size:13px;font-weight:600;color:#33424e;transition:.18s;
+}
+.bt-share-row button:hover{background:var(--bt-coral);border-color:var(--bt-coral);color:#fff;}
+.bt-toast{
+  position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);
+  background:rgba(18,33,46,.94);color:#fff;font-size:13.5px;
+  padding:11px 22px;border-radius:26px;z-index:300;
+  opacity:0;pointer-events:none;transition:.28s;box-shadow:0 10px 26px rgba(0,0,0,.3);
+  max-width:88vw;text-align:center;
+}
+.bt-toast.show{opacity:1;transform:translate(-50%,0);}
+.bt-backtop{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--bt-navy);color:#fff;display:grid;place-items:center;
+  box-shadow:0 8px 24px rgba(18,33,46,.28);
+  opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;z-index:120;
+}
+.bt-backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+.bt-backtop:hover{background:var(--bt-coral);}
+.bt-backtop svg{width:18px;height:18px;stroke:#fff;stroke-width:2.4;fill:none;}
+
+/* ============ 响应式 ============ */
+@media (max-width:1024px){
+  .bt-hero-in{grid-template-columns:1fr;gap:40px;}
+  .bt-hero-visual{max-width:560px;}
+  .bt-hero-mini{display:none;}
+  .bt-about-grid{grid-template-columns:1fr;}
+  .bt-focus-grid{grid-template-columns:1fr 1fr;}
+  .bt-card-col{grid-column:1/-1;grid-template-columns:1fr 1fr;grid-template-rows:none;}
+  .bt-topic-grid{grid-template-columns:repeat(2,1fr);}
+  .bt-creator-grid{grid-template-columns:repeat(2,1fr);}
+  .bt-community-grid{grid-template-columns:1fr;}
+  .bt-inspire-grid{grid-template-columns:1fr;}
+  .bt-faq-grid{grid-template-columns:1fr;}
+  .bt-footer-grid{grid-template-columns:1fr 1fr;}
+  .bt-nav{
+    display:none;position:absolute;left:0;right:0;top:68px;
+    background:#fff;border-bottom:1px solid var(--bt-line);
+    flex-direction:column;align-items:stretch;gap:0;padding:10px 16px 18px;
+    box-shadow:0 18px 30px rgba(18,33,46,.12);margin:0;
+  }
+  .bt-nav.open{display:flex;}
+  .bt-nav a{padding:11px 10px;border-radius:8px;}
+  .bt-burger{display:flex;}
+  .bt-search{width:auto;flex:1;min-width:0;margin-left:auto;}
+  .bt-search input{min-width:0;}
+  .bt-header-in{gap:12px;}
+}
+@media (max-width:680px){
+  .bt-section{padding:46px 16px;}
+  .bt-hero{padding:44px 16px 56px;}
+  .bt-hero-stats{gap:22px;}
+  .bt-focus-grid{grid-template-columns:1fr;}
+  .bt-card-col{grid-template-columns:1fr;}
+  .bt-topic-grid{grid-template-columns:1fr 1fr;gap:12px;}
+  .bt-creator-grid{grid-template-columns:1fr;}
+  .bt-inspire-grid{grid-template-columns:1fr;}
+  .bt-news-item{grid-template-columns:1fr;gap:6px;}
+  .bt-news-more{justify-self:start;}
+  .bt-footer-grid{grid-template-columns:1fr;gap:26px;}
+  .bt-search{display:none;}
+  .bt-notice-move{animation-duration:34s;}
+  .bt-search-hint{top:60px;}
+  .bt-share-row button{flex:1 1 45%;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶区：公告条 + 页头 -->
+<div class="bt-sticky-wrap">
+  <div class="bt-notice-bar" role="note" aria-label="站点公告">
+    <span class="bt-notice-badge">官方公告</span>
+    <div class="bt-notice-track">
+      <div class="bt-notice-move">
+        <span><b>11月18日</b> 新增「城市夜行」系列第 6 集，4K 高清版同步上线</span>
+        <span><b>11月15日</b> 冬季创作者扶持计划开启报名，首批 50 个创作席位</span>
+        <span><b>11月12日</b> 品牌年度影像特展开幕，线下点映开放预约</span>
+        <span><b>11月08日</b> 官网投稿通道升级，支持多机位素材上传与协作</span>
+        <span><b>11月18日</b> 新增「城市夜行」系列第 6 集，4K 高清版同步上线</span>
+        <span><b>11月15日</b> 冬季创作者扶持计划开启报名，首批 50 个创作席位</span>
+        <span><b>11月12日</b> 品牌年度影像特展开幕，线下点映开放预约</span>
+        <span><b>11月08日</b> 官网投稿通道升级，支持多机位素材上传与协作</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="bt-header bt-header-pos">
+    <div class="bt-header-in">
+      <a href="#bt-top" class="bt-logo" aria-label="91逼特逼网 官方网站首页">
+        <span class="bt-logo-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#ff6b4a"/></svg>
+        </span>
+        91逼特逼<em>网</em>
+      </a>
+      <nav class="bt-nav" id="btNav" aria-label="主导航">
+        <a href="#bt-top">首页</a>
+        <a href="#bt-focus">焦点视频</a>
+        <a href="#bt-topics">专题企划</a>
+        <a href="#bt-creators">创作者</a>
+        <a href="#bt-news">企业动态</a>
+        <a href="#bt-faq">帮助中心</a>
+        <a href="#bt-contact">联系我们</a>
+      </nav>
+      <form class="bt-search" id="btSearchForm" role="search" onsubmit="return false;">
+        <input type="search" id="btSearchInput" placeholder="搜索影片、创作者、专题" aria-label="站内搜索">
+        <button type="submit" aria-label="提交搜索">搜索</button>
+      </form>
+      <button class="bt-burger" id="btBurger" aria-label="展开导航菜单" aria-expanded="false" aria-controls="btNav">
+        <i></i><i></i><i></i>
+      </button>
+      <div class="bt-search-hint" id="btSearchHint" role="status" aria-live="polite"></div>
+    </div>
+  </header>
+</div>
+
+<main id="bt-top">
+
+  <!-- 首屏 -->
+  <section class="bt-hero" aria-labelledby="btHeroTitle">
+    <div class="bt-hero-in">
+      <div>
+        <span class="bt-hero-tag"><b>官方网站</b> · 原创影像品牌门户</span>
+        <h1 id="btHeroTitle">91逼特逼网</h1>
+        <p class="bt-hero-claim">以真实影像连接创作者，让每一段故事被认真看见</p>
+        <p class="bt-hero-intro">
+          91逼特逼网是一家专注原创视频内容的品牌企业，深耕真实记录、人物访谈与城市影像等垂直领域。
+          作为官方网站，我们为创作者与品牌搭建值得信赖的高品质内容生态，坚持正版、高清、专业的内容标准，
+          以持续运营的社区陪伴每一位观众与创作者共同成长。
+        </p>
+        <div class="bt-hero-stats">
+          <div class="bt-hero-stat"><b data-count="12800">12800<i>+</i></b><span>原创影像作品</span></div>
+          <div class="bt-hero-stat"><b data-count="2600">2600<i>+</i></b><span>签约创作者</span></div>
+          <div class="bt-hero-stat"><b data-count="96">96<i>%</i></b><span>用户口碑好评</span></div>
+        </div>
+        <div class="bt-hero-actions">
+          <a class="bt-btn bt-btn-primary" href="#bt-focus">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5l12 7-12 7z"/></svg>
+            进入焦点视频
+          </a>
+          <a class="bt-btn bt-btn-ghost" href="#bt-about">了解品牌故事</a>
+          <button class="bt-btn bt-btn-ghost" data-modal-open="btModalSubmit">我要投稿</button>
+        </div>
+      </div>
+      <div class="bt-hero-visual">
+        <figure class="bt-hero-cover">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231a3347'/%3E%3Cstop offset='.55' stop-color='%232c5a72'/%3E%3Cstop offset='1' stop-color='%23ff6b4a'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23f2b73f' stop-opacity='.85'/%3E%3Cstop offset='1' stop-color='%23ff6b4a' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g1)'/%3E%3Ccircle cx='620' cy='120' r='150' fill='%23ffd9cf' opacity='.16'/%3E%3Ccircle cx='150' cy='400' r='190' fill='url(%23g2)' opacity='.4'/%3E%3Cpath d='M0 360 Q200 300 400 350 T800 330 L800 500 L0 500 Z' fill='%230f1d29' opacity='.55'/%3E%3Cg fill='%23ffffff' opacity='.9'%3E%3Crect x='90' y='120' width='7' height='190' rx='3'/%3E%3Crect x='110' y='160' width='7' height='110' rx='3'/%3E%3Crect x='130' y='100' width='7' height='210' rx='3'/%3E%3Crect x='150' y='150' width='7' height='130' rx='3'/%3E%3Crect x='170' y='130' width='7' height='160' rx='3'/%3E%3C/g%3E%3Cg fill='%23f2b73f' opacity='.7'%3E%3Ccircle cx='660' cy='330' r='9'/%3E%3Ccircle cx='690' cy='360' r='5'/%3E%3Ccircle cx='630' cy='380' r='6'/%3E%3C/g%3E%3C/svg%3E" alt="91逼特逼网 品牌主视觉：城市夜色中流动的光影与镜头轨迹">
+          <figcaption class="bt-play-badge" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></span></figcaption>
+          <div class="bt-hero-cover-cap">
+            <div>
+              <strong>品牌年度影像 · 光影之下</strong>
+              <small>官方出品 / 4K 高清 / 32 分钟</small>
+            </div>
+            <span class="bt-pill">正版首发</span>
+          </div>
+        </figure>
+        <div class="bt-hero-mini">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23f2b73f'/%3E%3Crect y='90' width='320' height='90' fill='%23e08f2c'/%3E%3Ccircle cx='240' cy='52' r='34' fill='%23fff3d6' opacity='.85'/%3E%3Cpath d='M0 130 L70 96 L150 132 L230 100 L320 138 L320 180 L0 180 Z' fill='%23995a22' opacity='.7'/%3E%3Cg stroke='%23fff' stroke-width='4' opacity='.8'%3E%3Cpath d='M34 150 v-26'/%3E%3Cpath d='M44 150 v-36'/%3E%3Cpath d='M54 150 v-18'/%3E%3C/g%3E%3C/svg%3E" alt="创作者手记短片《日出之前》封面">
+          <p>创作者手记 · 日出之前</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词解析长文 -->
+  <section class="bt-section bt-about" id="bt-about" aria-labelledby="btAboutTitle">
+    <div class="bt-sec-head">
+      <span class="bt-eyebrow">品牌解析</span>
+      <h2 class="bt-h2" id="btAboutTitle">关于「91逼特逼网」，我们如何理解影像这件事</h2>
+      <p class="bt-sec-sub">一个围绕真实、专业与陪伴持续构建的品牌内容生态</p>
+    </div>
+    <div class="bt-about-grid">
+      <article class="bt-article">
+        <p>
+          在信息密度越来越高的今天，影像早已不只是消遣。对很多人来说，一段几分钟的短片可能是下班路上的喘息，
+          也可能是一次重新理解生活的契机。91逼特逼网自创立之初就把自己定位为一家“把影像当作长期事业”的品牌企业：
+          我们不是单纯的内容搬运方，而是一个持续运营、愿意为创作者和观众负责的原创视频官网。
+        </p>
+        <p>
+          作为<strong>官方网站</strong>，这里承载的不只是播放列表，而是一整套内容生态。前端是我们精心编排的焦点视频与专题企划，
+          中段是签约创作者的作品矩阵，后端则是选题策划、拍摄支持、后期协作与版权保护的完整链路。
+          我们相信，品质不是形容词，是可以被拆解成流程、标准与耐心的具体动作。
+        </p>
+
+        <h3>一、真实，是91逼特逼网最底层的创作准则</h3>
+        <p>
+          “真实”这两个字被反复提及，因为它确实是我们所有内容的出发点。我们鼓励创作者记录真实的人、真实的场景与真实的情绪，
+          而不是把生活剪成一张过度修饰的海报。在品牌自制的「城市夜行」系列里，镜头会停在便利店门口的暖光、
+          加班者揉眼睛的一秒钟，以及凌晨四点醒来浇花的人。这些画面并不戏剧化，却让人相信影像的力量来自细节。
+        </p>
+        <p>
+          在91逼特逼网，我们有一套相对克制的选题评估机制：一段素材是否有具体的人？是否有可被验证的场景？
+          是否提出了一个真实的问题？如果三问皆空，我们会建议创作者重新思考。这种近乎固执的坚持，
+          让品牌在用户中积累了相对稳定的口碑，也让“值得信赖”成为我们最看重的标签之一。
+        </p>
+
+        <h3>二、专业，是把热爱变成可复用的方法</h3>
+        <p>
+          对普通观众而言，专业意味着画质清晰、结构顺畅；对创作者而言，专业意味着可执行的流程。
+          我们在官网开放了创作手册、拍摄清单与剪辑参考，把过去几年积累的经验整理成可下载的资料包。
+          从收音设备的摆放，到访谈机位的选择，再到后期调色的基本参数，我们希望降低创作的门槛，
+          而不是制造神秘感。
+        </p>
+        <p>
+          同时，平台建立了分层的内容审核与版权登记机制。每一部上线作品都会经过画质、音频与内容合规的检查，
+          并通过正版登记为创作者留下可追溯的权益凭证。这套机制并不显眼，却是内容生态能够长期运转的基础。
+          在行业观察者看来，这种对基础工程的重视，正是91逼特逼网在垂直领域站稳脚跟的关键。
+        </p>
+
+        <h3>三、陪伴，是社区真正的黏合剂</h3>
+        <p>
+          视频品牌最容易犯的错误，是把自己当成一个冷冰冰的分发管道。我们不希望这样。91逼特逼网在社区运营上投入了相当多的精力：
+          每周的创作者茶话会、每月的主题征集、每季度的线下点映，都是为了让创作者之间、创作者与观众之间产生真实的连接。
+          有人在评论区认识了下一次合作对象，也有人因为一条留言决定继续拍完差点放弃的素材。
+        </p>
+        <p>
+          这种陪伴关系，也体现在我们对新人的态度上。平台设置了新人榜与扶持计划，为第一次投稿的创作者提供曝光位与一对一的剪辑建议。
+          成长并不是一句口号，而是具体到一次封面修改、一段配乐替换、一条标题打磨。
+          我们乐于看到新人慢慢被观众记住，也乐于看到老创作者依然保有最初的耐心。
+        </p>
+
+        <h3>四、创新，是在既有路径之外多走一步</h3>
+        <p>
+          影像行业变化很快，从横屏到竖屏，从长视频到短内容，从单人创作到协作式生产，每一次变化都在重新定义“好看”的标准。
+          91逼特逼网选择拥抱变化，但保留判断。我们在内容形态上尝试互动式短片、双线叙事与声音纪录，
+          也在工具层面探索智能分镜建议与素材标签化管理，以提升创作者的效率。
+        </p>
+        <p>
+          但创新不等于追热点。我们更愿意把创新理解为“在既有路径之外多走一步”：
+          为一个普通人的故事多留三十秒，为一段环境音多等一个黄昏，为一个模糊的想法多开一次策划会。
+          这种慢一点、稳一点的创新，构成了91逼特逼网区别于其他平台的气质。
+        </p>
+
+        <h3>五、面向未来：把影响力用在对的地方</h3>
+        <p>
+          随着平台规模扩大，我们越来越清楚地意识到，影响力与责任是同一件事。
+          91逼特逼网持续参与公益影像计划，为社区记录、非遗手艺人、乡村教师等题材提供拍摄支持；
+          在内容规范上，我们对未成年人保护、隐私边界与素材授权保持严格标准。
+          我们相信，一个内容品牌真正的价值，不只在于它被多少人看到，更在于它让哪些事情被看见。
+        </p>
+        <p>
+          未来，91逼特逼网会继续在真实影像这条路上深耕，把官网做成一个创作者愿意反复回来的地方，
+          把社区做成一个观众愿意停留、愿意交流的地方。我们希望多年以后回头看，平台上留下的不只是一批作品，
+          而是一段可以被信任的内容记忆。这也是我们理解“品牌”二字的方式。
+        </p>
+      </article>
+      <aside>
+        <div class="bt-aside-card">
+          <h4>品牌速览</h4>
+          <ul>
+            <li><span>品牌定位</span><span>原创影像社区</span></li>
+            <li><span>核心主张</span><span>真实 · 专业</span></li>
+            <li><span>内容方向</span><span>记录 / 访谈 / 城市</span></li>
+            <li><span>上线作品</span><span>12800+ 部</span></li>
+            <li><span>签约创作者</span><span>2600+ 位</span></li>
+            <li><span>更新频率</span><span>每日更新</span></li>
+          </ul>
+        </div>
+        <div class="bt-aside-card">
+          <h4>关键词导航</h4>
+          <div class="bt-chip-row">
+            <button class="bt-chip" data-chip="真实影像">真实影像</button>
+            <button class="bt-chip" data-chip="人物访谈">人物访谈</button>
+            <button class="bt-chip" data-chip="城市记录">城市记录</button>
+            <button class="bt-chip" data-chip="创作幕后">创作幕后</button>
+            <button class="bt-chip" data-chip="行业观察">行业观察</button>
+            <button class="bt-chip" data-chip="治愈日常">治愈日常</button>
+          </div>
+        </div>
+        <div class="bt-aside-card">
+          <h4>官方提示</h4>
+          <p class="bt-aside-note">
+            本站为91逼特逼网品牌官方网站，所有标注“原创”“正版”的内容均已完成版权登记。
+            如需转载或商业合作，请通过页面底部联系方式与我们取得联系。
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 焦点视频 -->
+  <section class="bt-section bt-focus" id="bt-focus" aria-labelledby="btFocusTitle">
+    <div class="bt-sec-head">
+      <span class="bt-eyebrow">焦点视频</span>
+      <h2 class="bt-h2" id="btFocusTitle">本周值得花时间看完的六部作品</h2>
+      <p class="bt-sec-sub">由内容编辑部与社区共同选出，覆盖记录、访谈与实验影像</p>
+    </div>
+    <div class="bt-focus-grid">
+      <article class="bt-card bt-card-big">
+        <div class="bt-card-cover">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='n1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f1d29'/%3E%3Cstop offset='.6' stop-color='%23234760'/%3E%3Cstop offset='1' stop-color='%23853d2c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23n1)'/%3E%3Ccircle cx='500' cy='80' r='46' fill='%23f2b73f' opacity='.75'/%3E%3Cpath d='M0 250 L120 196 L250 252 L380 210 L520 260 L640 226 L640 360 L0 360 Z' fill='%230b1620' opacity='.7'/%3E%3Cg fill='%23ffd9cf' opacity='.8'%3E%3Crect x='80' y='280' width='52' height='3' rx='1.5'/%3E%3Crect x='80' y='292' width='30' height='3' rx='1.5'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.5'%3E%3Ccircle cx='220' cy='150' r='4'/%3E%3Ccircle cx='300' cy='120' r='3'/%3E%3Ccircle cx='380' cy='170' r='5'/%3E%3C/g%3E%3C/svg%3E" alt="城市夜行第六集封面：夜色中的街灯与楼宇轮廓">
+          <span class="bt-card-tag">品牌自制</span>
+          <span class="bt-card-dur">18:42</span>
+          <span class="bt-cover-play" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></i></span>
+        </div>
+        <div class="bt-card-body">
+          <h3 class="bt-card-title">城市夜行 06｜凌晨四点的早餐铺，与一座城的醒来的顺序</h3>
+          <p class="bt-card-desc">
+            我们跟着一对做了二十二年早餐的夫妻，从和面、生火到第一笼包子出屉。镜头之外，是他们如何在一座迅速变化的城市里，
+            把一份手艺稳稳地留下来。
+          </p>
+          <div class="bt-card-meta">
+            <div class="bt-author">
+              <span class="bt-avatar" style="background:#ff6b4a">纪</span>
+              <span>纪实组 · 阿纪</span>
+            </div>
+            <div class="bt-card-ops">
+              <button class="bt-op js-like" aria-label="点赞">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.2-8.2C1.2 9.4 2.7 6 6 6c2 0 3.3 1.1 4 2 1-.9 2.3-2 4.3-2 3.3 0 4.8 3.4 3.2 6.8C19 16.6 12 21 12 21z"/></svg>
+                <b class="js-like-num">3268</b>
+              </button>
+              <button class="bt-op js-save" aria-label="收藏">
+                <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 011 1v17l-7-4.2L5 21V4a1 1 0 011-1z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="bt-card-col">
+        <article class="bt-card">
+          <div class="bt-card-cover">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23e9f1f5'/%3E%3Crect x='60' y='60' width='220' height='240' rx='12' fill='%23c7d9e3'/%3E%3Crect x='330' y='90' width='250' height='210' rx='10' fill='%23a9c2d1'/%3E%3Ccircle cx='470' cy='160' r='40' fill='%23ff6b4a' opacity='.85'/%3E%3Cpath d='M360 260 Q430 200 500 250 T590 236' stroke='%2312212e' stroke-width='5' fill='none' opacity='.5'/%3E%3C/svg%3E" alt="人物访谈《把手艺做慢》封面：工作室内的手工工具">
+            <span class="bt-card-tag">人物访谈</span>
+            <span class="bt-card-dur">12:05</span>
+            <span class="bt-cover-play" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></i></span>
+          </div>
+          <div class="bt-card-body">
+            <h3 class="bt-card-title">把手艺做慢：一位木作匠人的三十年</h3>
+            <p class="bt-card-desc">从学徒到开工作室，他坚持不用速成胶。这期访谈聊的是时间值不值得。</p>
+            <div class="bt-card-meta">
+              <div class="bt-author">
+                <span class="bt-avatar" style="background:#2a5872">木</span>
+                <span>木作频道</span>
+              </div>
+              <div class="bt-card-ops">
+                <button class="bt-op js-like" aria-label="点赞">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.2-8.2C1.2 9.4 2.7 6 6 6c2 0 3.3 1.1 4 2 1-.9 2.3-2 4.3-2 3.3 0 4.8 3.4 3.2 6.8C19 16.6 12 21 12 21z"/></svg>
+                  <b class="js-like-num">1841</b>
+                </button>
+                <button class="bt-op js-save" aria-label="收藏">
+                  <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 011 1v17l-7-4.2L5 21V4a1 1 0 011-1z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="bt-card">
+          <div class="bt-card-cover">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='n3' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23f2b73f'/%3E%3Cstop offset='1' stop-color='%23d9772f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23n3)'/%3E%3Cg stroke='%23fff8e6' stroke-width='3' opacity='.85'%3E%3Cpath d='M120 300 V180 M170 300 V140 M220 300 V210 M270 300 V160'/%3E%3Cpath d='M100 300 H560' stroke-width='4'/%3E%3C/g%3E%3Crect x='400' y='90' width='130' height='150' rx='8' fill='%2312212e' opacity='.8'/%3E%3Ccircle cx='465' cy='140' r='18' fill='%23ffd9cf'/%3E%3C/svg%3E" alt="创作幕后《一场雨拍了三天》封面：片场照明与器材">
+            <span class="bt-card-tag">创作幕后</span>
+            <span class="bt-card-dur">09:31</span>
+            <span class="bt-cover-play" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></i></span>
+          </div>
+          <div class="bt-card-body">
+            <h3 class="bt-card-title">一场雨拍了三天：短片《归途》的幕后记录</h3>
+            <p class="bt-card-desc">设备清单、分镜修改与临时演员的即兴发挥，全部摊开来讲。</p>
+            <div class="bt-card-meta">
+              <div class="bt-author">
+                <span class="bt-avatar" style="background:#f2b73f;color:#5a3d00">归</span>
+                <span>幕后工坊</span>
+              </div>
+              <div class="bt-card-ops">
+                <button class="bt-op js-like" aria-label="点赞">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.2-8.2C1.2 9.4 2.7 6 6 6c2 0 3.3 1.1 4 2 1-.9 2.3-2 4.3-2 3.3 0 4.8 3.4 3.2 6.8C19 16.6 12 21 12 21z"/></svg>
+                  <b class="js-like-num">962</b>
+                </button>
+                <button class="bt-op js-save" aria-label="收藏">
+                  <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 011 1v17l-7-4.2L5 21V4a1 1 0 011-1z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="bt-card-col">
+        <article class="bt-card">
+          <div class="bt-card-cover">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23152a3a'/%3E%3Cg fill='none' stroke='%234f8fa8' stroke-width='2' opacity='.7'%3E%3Ccircle cx='320' cy='180' r='70'/%3E%3Ccircle cx='320' cy='180' r='110'/%3E%3Ccircle cx='320' cy='180' r='150'/%3E%3C/g%3E%3Ccircle cx='320' cy='180' r='34' fill='%23ff6b4a'/%3E%3Cpath d='M120 300 L520 60' stroke='%23f2b73f' stroke-width='2' opacity='.6'/%3E%3C/svg%3E" alt="知识科普《声音的形状》封面：声波可视化图形">
+            <span class="bt-card-tag">知识科普</span>
+            <span class="bt-card-dur">15:20</span>
+            <span class="bt-cover-play" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></i></span>
+          </div>
+          <div class="bt-card-body">
+            <h3 class="bt-card-title">声音的形状：我们为什么会记住一段环境音</h3>
+            <p class="bt-card-desc">从菜市场的回声到地铁进站的提示音，声音如何悄悄塑造记忆。</p>
+            <div class="bt-card-meta">
+              <div class="bt-author">
+                <span class="bt-avatar" style="background:#4f8fa8">声</span>
+                <span>声场实验室</span>
+              </div>
+              <div class="bt-card-ops">
+                <button class="bt-op js-like" aria-label="点赞">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.2-8.2C1.2 9.4 2.7 6 6 6c2 0 3.3 1.1 4 2 1-.9 2.3-2 4.3-2 3.3 0 4.8 3.4 3.2 6.8C19 16.6 12 21 12 21z"/></svg>
+                  <b class="js-like-num">2207</b>
+                </button>
+                <button class="bt-op js-save" aria-label="收藏">
+                  <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 011 1v17l-7-4.2L5 21V4a1 1 0 011-1z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="bt-card">
+          <div class="bt-card-cover">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f6efe4'/%3E%3Crect x='0' y='230' width='640' height='130' fill='%23d8c5a8'/%3E%3Ccircle cx='160' cy='120' r='52' fill='%23a8bfa0'/%3E%3Ccircle cx='300' cy='150' r='34' fill='%23e0a867'/%3E%3Cpath d='M380 230 L470 90 L560 230 Z' fill='%232f5d52' opacity='.85'/%3E%3Cpath d='M60 250 Q200 200 340 250 T620 240' stroke='%232f5d52' stroke-width='6' fill='none' opacity='.55'/%3E%3C/svg%3E" alt="治愈影像《四季厨房》封面：窗台植物与木质餐桌">
+            <span class="bt-card-tag">治愈影像</span>
+            <span class="bt-card-dur">11:48</span>
+            <span class="bt-cover-play" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></i></span>
+          </div>
+          <div class="bt-card-body">
+            <h3 class="bt-card-title">四季厨房 · 立冬：一锅萝卜排骨汤的耐心</h3>
+            <p class="bt-card-desc">没有复杂调味，只有小火慢炖的两小时，以及窗外的风声。</p>
+            <div class="bt-card-meta">
+              <div class="bt-author">
+                <span class="bt-avatar" style="background:#2f5d52">食</span>
+                <span>慢食记</span>
+              </div>
+              <div class="bt-card-ops">
+                <button class="bt-op js-like" aria-label="点赞">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.2-8.2C1.2 9.4 2.7 6 6 6c2 0 3.3 1.1 4 2 1-.9 2.3-2 4.3-2 3.3 0 4.8 3.4 3.2 6.8C19 16.6 12 21 12 21z"/></svg>
+                  <b class="js-like-num">1533</b>
+                </button>
+                <button class="bt-op js-save" aria-label="收藏">
+                  <svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 011 1v17l-7-4.2L5 21V4a1 1 0 011-1z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="bt-section bt-topics" id="bt-topics" aria-labelledby="btTopicsTitle">
+    <div class="bt-sec-head">
+      <span class="bt-eyebrow">专题企划</span>
+      <h2 class="bt-h2" id="btTopicsTitle">四个正在推进中的品牌企划</h2>
+      <p class="bt-sec-sub">由官方编辑部发起，面向全社区开放投稿与共创</p>
+    </div>
+    <div class="bt-topic-grid">
+      <article class="bt-topic">
+        <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 480'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23234760'/%3E%3Cstop offset='1' stop-color='%230b1620'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='480' fill='url(%23t1)'/%3E%3Ccircle cx='300' cy='90' r='58' fill='%23f2b73f' opacity='.7'/%3E%3Cg fill='%23ffffff' opacity='.22'%3E%3Crect x='40' y='240' width='60' height='160'/%3E%3Crect x='120' y='200' width='60' height='200'/%3E%3Crect x='200' y='270' width='60' height='130'/%3E%3C/g%3E%3Crect x='280' y='230' width='70' height='170' fill='%23ff6b4a' opacity='.8'/%3E%3C/svg%3E" alt="专题《城市夜行》封面：夜色里的城市建筑与暖色窗光">
+        <div class="bt-topic-in">
+          <span class="bt-pill">进行中</span>
+          <h3>城市夜行</h3>
+          <p>走进不同城市的凌晨与深夜，记录那些被白天忽略的人与光。</p>
+          <span class="bt-topic-status">已更新 6 集 / 每周五</span>
+        </div>
+      </article>
+      <article class="bt-topic">
+        <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 480'%3E%3Crect width='400' height='480' fill='%23f6efe4'/%3E%3Ccircle cx='120' cy='120' r='74' fill='%23e0a867' opacity='.8'/%3E%3Crect x='60' y='250' width='280' height='170' rx='14' fill='%23c9b28e'/%3E%3Cpath d='M80 250 L200 150 L320 250 Z' fill='%232f5d52'/%3E%3Ccircle cx='200' cy='330' r='30' fill='%23f6efe4'/%3E%3C/svg%3E" alt="专题《一间屋的温度》封面：暖色调的家居与屋顶轮廓">
+        <div class="bt-topic-in">
+          <span class="bt-pill">征集中</span>
+          <h3>一间屋的温度</h3>
+          <p>关于家、关于居住、关于收纳与生活秩序的真实记录征集。</p>
+          <span class="bt-topic-status">开放投稿 / 12月30日截止</span>
+        </div>
+      </article>
+      <article class="bt-topic">
+        <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 480'%3E%3Crect width='400' height='480' fill='%231f3b4c'/%3E%3Cg stroke='%23ff6b4a' stroke-width='3' fill='none' opacity='.8'%3E%3Ccircle cx='200' cy='210' r='90'/%3E%3Ccircle cx='200' cy='210' r='50'/%3E%3C/g%3E%3Cpath d='M200 60 L200 360' stroke='%23f2b73f' stroke-width='2' opacity='.6'/%3E%3Cpath d='M60 210 L340 210' stroke='%23f2b73f' stroke-width='2' opacity='.6'/%3E%3C/svg%3E" alt="专题《镜头之外》封面：取景框与几何线条构成">
+        <div class="bt-topic-in">
+          <span class="bt-pill">已完结</span>
+          <h3>镜头之外</h3>
+          <p>创作者访谈企划，聊拍摄习惯、职业选择与那些没有拍到的画面。</p>
+          <span class="bt-topic-status">共 8 期 / 可完整回看</span>
+        </div>
+      </article>
+      <article class="bt-topic">
+        <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 480'%3E%3Crect width='400' height='480' fill='%23dbe9ef'/%3E%3Cpath d='M0 340 L110 240 L220 320 L330 220 L400 270 L400 480 L0 480 Z' fill='%234a7791' opacity='.8'/%3E%3Ccircle cx='310' cy='90' r='46' fill='%23f2b73f'/%3E%3Cpath d='M60 150 Q130 100 200 150 T340 140' stroke='%23ffffff' stroke-width='4' fill='none' opacity='.7'/%3E%3C/svg%3E" alt="专题《向外走一步》封面：山脊线与天空的冷调风景">
+        <div class="bt-topic-in">
+          <span class="bt-pill">预告</span>
+          <h3>向外走一步</h3>
+          <p>户外与远行的新企划，记录普通人第一次走出舒适区的样子。</p>
+          <span class="bt-topic-status">即将上线 / 敬请关注</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="bt-section bt-creators" id="bt-creators" aria-labelledby="btCreatorsTitle">
+    <div class="bt-sec-head">
+      <span class="bt-eyebrow">创作者矩阵</span>
+      <h2 class="bt-h2" id="btCreatorsTitle">社区里持续输出的六位作者</h2>
+      <p class="bt-sec-sub">他们来自不同生活场景，却共同构成了91逼特逼网的内容底色</p>
+    </div>
+    <div class="bt-creator-grid">
+      <article class="bt-creator">
+        <div class="bt-creator-top">
+          <span class="bt-avatar-lg" style="background:linear-gradient(135deg,#ff6b4a,#f2b73f)">纪</span>
+          <div><h3>纪实组 · 阿纪</h3><small>城市记录 / 人物访谈</small></div>
+        </div>
+        <p>七年纪录片拍摄经验，擅长在嘈杂环境里捕捉安静的一刻。相信好素材长在街上。</p>
+        <div class="bt-creator-nums">
+          <span><b>126</b> 作品</span>
+          <span><b>38.6万</b> 关注</span>
+          <button class="js-author" data-author="纪实组 · 阿纪">资料</button>
+        </div>
+      </article>
+      <article class="bt-creator">
+        <div class="bt-creator-top">
+          <span class="bt-avatar-lg" style="background:linear-gradient(135deg,#2f5d52,#a8bfa0)">食</span>
+          <div><h3>慢食记</h3><small>美食烹饪 / 生活方式</small></div>
+        </div>
+        <p>只拍家常菜，不用滤镜掩盖食材本身的颜色。镜头里常有风和晾晒的衣物。</p>
+        <div class="bt-creator-nums">
+          <span><b>94</b> 作品</span>
+          <span><b>21.2万</b> 关注</span>
+          <button class="js-author" data-author="慢食记">资料</button>
+        </div>
+      </article>
+      <article class="bt-creator">
+        <div class="bt-creator-top">
+          <span class="bt-avatar-lg" style="background:linear-gradient(135deg,#4f8fa8,#234760)">声</span>
+          <div><h3>声场实验室</h3><small>知识科普 / 声音设计</small></div>
+        </div>
+        <p>用可视化讲声音，也用声音讲城市。习惯在录制前先闭眼听三分钟。</p>
+        <div class="bt-creator-nums">
+          <span><b>61</b> 作品</span>
+          <span><b>17.8万</b> 关注</span>
+          <button class="js-author" data-author="声场实验室">资料</button>
+        </div>
+      </article>
+      <article class="bt-creator">
+        <div class="bt-creator-top">
+          <span class="bt-avatar-lg" style="background:linear-gradient(135deg,#b07a3c,#e0a867)">木</span>
+          <div><h3>木作频道</h3><small>手作 DIY / 人物访谈</small></div>
+        </div>
+        <p>拍木工，也拍手艺人。不追求宏大叙事，只想让工具与木纹被看清。</p>
+        <div class="bt-creator-nums">
+          <span><b>78</b> 作品</span>
+          <span><b>15.4万</b> 关注</span>
+          <button class="js-author" data-author="木作频道">资料</button>
+        </div>
+      </article>
+      <article class="bt-creator">
+        <div class="bt-creator-top">
+          <span class="bt-avatar-lg" style="background:linear-gradient(135deg,#5a6fae,#9aa8d8)">归</span>
+          <div><h3>幕后工坊</h3><small>创作幕后 / 教程干货</small></div>
+        </div>
+        <p>专注幕后与拆解，从分镜到调色，把每次拍摄的经验做成可复用的清单。</p>
+        <div class="bt-creator-nums">
+          <span><b>52</b> 作品</span>
+          <span><b>12.1万</b> 关注</span>
+          <button class="js-author" data-author="幕后工坊">资料</button>
+        </div>
+      </article>
+      <article class="bt-creator">
+        <div class="bt-creator-top">
+          <span class="bt-avatar-lg" style="background:linear-gradient(135deg,#c95b7c,#e8a2b5)">向</span>
+          <div><h3>向外走一步</h3><small>户外活动 / 旅行见闻</small></div>
+        </div>
+        <p>拍摄普通人的第一次远行，强调过程而非滤镜，习惯把地图留在片尾。</p>
+        <div class="bt-creator-nums">
+          <span><b>43</b> 作品</span>
+          <span><b>9.7万</b> 关注</span>
+          <button class="js-author" data-author="向外走一步">资料</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 榜单 + 评价 -->
+  <section class="bt-section bt-community" id="bt-community" aria-labelledby="btCommunityTitle">
+    <div class="bt-sec-head">
+      <span class="bt-eyebrow">社区温度</span>
+      <h2 class="bt-h2" id="btCommunityTitle">热度在数据里，口碑在留言里</h2>
+      <p class="bt-sec-sub">本周热门榜单与真实用户评价，共同构成社区的两面</p>
+    </div>
+    <div class="bt-community-grid">
+      <div>
+        <div class="bt-rank-list">
+          <h3>本周口碑榜</h3>
+          <div class="bt-rank-item"><span class="bt-rank-no">1</span><span class="bt-rank-name">城市夜行 06｜凌晨四点的早餐铺</span><span class="bt-rank-hot">热 98</span></div>
+          <div class="bt-rank-item"><span class="bt-rank-no">2</span><span class="bt-rank-name">声音的形状：我们为什么会记住一段环境音</span><span class="bt-rank-hot">热 94</span></div>
+          <div class="bt-rank-item"><span class="bt-rank-no">3</span><span class="bt-rank-name">把手艺做慢：一位木作匠人的三十年</span><span class="bt-rank-hot">热 91</span></div>
+          <div class="bt-rank-item"><span class="bt-rank-no">4</span><span class="bt-rank-name">四季厨房 · 立冬：一锅萝卜排骨汤的耐心</span><span class="bt-rank-hot">热 88</span></div>
+          <div class="bt-rank-item"><span class="bt-rank-no">5</span><span class="bt-rank-name">一场雨拍了三天：短片《归途》的幕后记录</span><span class="bt-rank-hot">热 85</span></div>
+          <div class="bt-rank-item"><span class="bt-rank-no">6</span><span class="bt-rank-name">第一次露营：我们在风里煮糊了一锅饭</span><span class="bt-rank-hot">热 81</span></div>
+        </div>
+      </div>
+      <div>
+        <article class="bt-review">
+          <div class="bt-review-top">
+            <span class="bt-avatar" style="background:#4f8fa8">林</span>
+            <div><h4>林川</h4><small>观众 · 关注 2 年</small></div>
+            <span class="bt-stars">★★★★★</span>
+          </div>
+          <p>最喜欢这里的一点是，视频不急着给结论。城市夜行那集我看了两遍，第二遍才发现背景里有个一直在收摊的阿姨，特别真实。</p>
+        </article>
+        <article class="bt-review">
+          <div class="bt-review-top">
+            <span class="bt-avatar" style="background:#ff6b4a">周</span>
+            <div><h4>周未</h4><small>创作者 · 新人榜 12 位</small></div>
+            <span class="bt-stars">★★★★★</span>
+          </div>
+          <p>第一次投稿的时候被退回了两次，编辑给了很具体的手写建议，包括哪一段配乐多余。现在回头看，那两次修改让片子完整了很多。</p>
+        </article>
+        <article class="bt-review">
+          <div class="bt-review-top">
+            <span class="bt-avatar" style="background:#2f5d52">陈</span>
+            <div><h4>陈默</h4><small>观众 · 收藏夹 47 条</small></div>
+            <span class="bt-stars">★★★★☆</span>
+          </div>
+          <p>画质和声音确实做得很稳，尤其访谈类的收音。如果专题更新再快一点就更好了，不过慢一点也能理解。</p>
+        </article>
+        <article class="bt-review">
+          <div class="bt-review-top">
+            <span class="bt-avatar" style="background:#b07a3c">许</span>
+            <div><h4>许南</h4><small>观众 · 常看手作频道</small></div>
+            <span class="bt-stars">★★★★★</span>
+          </div>
+          <p>木作频道那位老师傅的笑声太有感染力了。看的时候给我爸发了链接，他回我一句“这人手稳”，居然聊了半小时。</p>
+        </article>
+        <article class="bt-review">
+          <div class="bt-review-top">
+            <span class="bt-avatar" style="background:#5a6fae">阿</span>
+            <div><h4>阿岚</h4><small>创作者 · 幕后类作者</small></div>
+            <span class="bt-stars">★★★★★</span>
+          </div>
+          <p>创作手册是真的有用，我把清单打印出来贴在墙上。上周拍活动现场，靠它少漏了两个关键机位。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作灵感 -->
+  <section class="bt-section bt-inspire" id="bt-inspire" aria-labelledby="btInspireTitle">
+    <div class="bt-sec-head">
+      <span class="bt-eyebrow">创作灵感</span>
+      <h2 class="bt-h2" id="btInspireTitle">给正在准备的你，三份可执行的参考</h2>
+      <p class="bt-sec-sub">来自官方编辑部的创作建议，欢迎在社区里交流补充</p>
+    </div>
+    <div class="bt-inspire-grid">
+      <article class="bt-inspire-card">
+        <h3>选题灵感：从一个具体的人开始</h3>
+        <p>与其说“我想拍城市”，不如先找到一个人：夜班公交的司机、凌晨扫街的环卫工、总在楼下修鞋的师傅。</p>
+        <ul>
+          <li>列出三个你每周都会见到却不了解的人</li>
+          <li>用一句话写下你最想问他/她的问题</li>
+          <li>先拍 90 秒，再决定要不要扩展成长片</li>
+        </ul>
+        <div class="bt-chip-row">
+          <button class="bt-chip" data-chip="人物选题">人物选题</button>
+          <button class="bt-chip" data-chip="开场设计">开场设计</button>
+        </div>
+      </article>
+      <article class="bt-inspire-card">
+        <h3>剪辑思路：让环境音先说话</h3>
+        <p>很多创作者习惯先铺音乐，其实环境音才是让画面可信的关键。建议先粗剪画面，再单独做一条声音轨。</p>
+        <ul>
+          <li>保留 3 秒以上的环境声作为转场</li>
+          <li>音乐进入前先让观众听见空间</li>
+          <li>结尾不必收得太满，留一点呼吸</li>
+        </ul>
+        <div class="bt-chip-row">
+          <button class="bt-chip" data-chip="声音设计">声音设计</button>
+          <button class="bt-chip" data-chip="节奏控制">节奏控制</button>
+        </div>
+      </article>
+      <article class="bt-inspire-card">
+        <h3>标题与封面：说清楚，再谈吸引</h3>
+        <p>好的标题应该让观众在 3 秒内知道要看什么。封面上的文字不超过八个字，人物表情比风景更容易被点击。</p>
+        <ul>
+          <li>标题里放一个具体的时间、地点或数字</li>
+          <li>封面避免超过三种主色</li>
+          <li>不要用夸张许诺换取点击</li>
+        </ul>
+        <div class="bt-chip-row">
+          <button class="bt-chip" data-chip="标题打磨">标题打磨</button>
+          <button class="bt-chip" data-chip="封面设计">封面设计</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 企业动态 -->
+  <section class="bt-section bt-news" id="bt-news" aria-labelledby="btNewsTitle">
+    <div class="bt-sec-head">
+      <span class="bt-eyebrow">企业动态</span>
+      <h2 class="bt-h2" id="btNewsTitle">来自91逼特逼网的官方发布</h2>
+      <p class="bt-sec-sub">品牌合作、平台更新与社区活动的公开记录</p>
+    </div>
+    <div class="bt-news-list">
+      <div class="bt-news-item">
+        <span class="bt-news-date">2026 / 11 / 18</span>
+        <div><h3>「城市夜行」第六集上线，4K 高清版本同步开放</h3><p>本集聚焦凌晨四点的早餐铺，拍摄周期 11 天，官方出品。</p></div>
+        <span class="bt-news-more">官方发布</span>
+      </div>
+      <div class="bt-news-item">
+        <span class="bt-news-date">2026 / 11 / 15</span>
+        <div><h3>冬季创作者扶持计划开启报名，首批开放 50 个席位</h3><p>面向新人作者，提供曝光位、剪辑建议与设备支持，报名截止 12 月 10 日。</p></div>
+        <span class="bt-news-more">报名中</span>
+      </div>
+      <div class="bt-news-item">
+        <span class="bt-news-date">2026 / 11 / 12</span>
+        <div><h3>品牌年度影像特展开幕，线下点映开放预约</h3><p>精选 24 部年度作品，展期三周，官网可预约场次。</p></div>
+        <span class="bt-news-more">活动</span>
+      </div>
+      <div class="bt-news-item">
+        <span class="bt-news-date">2026 / 11 / 08</span>
+        <div><h3>官网投稿通道升级，支持多机位素材上传与协作</h3><p>新增版本管理与素材标签功能，团队协作流程进一步简化。</p></div>
+        <span class="bt-news-more">平台更新</span>
+      </div>
+      <div class="bt-news-item">
+        <span class="bt-news-date">2026 / 10 / 30</span>
+        <div><h3>91逼特逼网与三家公益机构达成影像记录合作</h3><p>为社区记录与非遗手艺题材提供拍摄支持，首批项目已进入前期调研。</p></div>
+        <span class="bt-news-more">合作</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ 与联系 -->
+  <section class="bt-section bt-faq" id="bt-faq" aria-labelledby="btFaqTitle">
+    <div class="bt-sec-head">
+      <span class="bt-eyebrow">帮助中心</span>
+      <h2 class="bt-h2" id="btFaqTitle">常见问题与官方联系渠道</h2>
+      <p class="bt-sec-sub">关于投稿、版权、合作与观看体验，这里多数问题都能找到答案</p>
+    </div>
+    <div class="bt-faq-grid" id="bt-contact">
+      <div>
+        <details open>
+          <summary>如何向91逼特逼网投稿？</summary>
+          <p>点击页面中的“我要投稿”按钮填写基本信息，上传作品文件或素材链接即可。我们建议先提交 90 秒样片，编辑部会在 5 个工作日内给出反馈，通过后再补充完整成片与授权材料。</p>
+        </details>
+        <details>
+          <summary>平台对作品的画质和时长有要求吗？</summary>
+          <p>建议分辨率 1080P 及以上，音频采样率不低于 44.1kHz。单部作品时长建议 3 至 30 分钟；专题类内容可按企划要求放宽。画质与声音的完成度会直接影响审核优先级。</p>
+        </details>
+        <details>
+          <summary>作品版权归谁所有？</summary>
+          <p>作品版权归创作者所有。91逼特逼网在获得授权后提供展示与传播服务，并协助完成正版登记。任何商业使用都会另行签署协议，未经许可不会将作品用于第三方场景。</p>
+        </details>
+        <details>
+          <summary>为什么有的内容标注“原创”而有的标注“正版”？</summary>
+          <p>“原创”指由平台或签约创作者自主拍摄制作；“正版”指已获得合法授权的内容。两类标识均可在详情页查看说明，方便观众了解内容来源。</p>
+        </details>
+        <details>
+          <summary>如何申请品牌合作或媒体采访？</summary>
+          <p>请通过下方合作邮箱提交需求简述、机构信息与时间安排。品牌合作一般在 3 个工作日内回复，媒体采访需提前 7 天预约，以便协调受访创作者。</p>
+        </details>
+        <details>
+          <summary>遇到播放异常或页面问题怎么办？</summary>
+          <p>请先尝试刷新页面或更换浏览器。若问题仍在，可通过反馈弹窗提交问题描述与设备信息，技术支持团队会在工作时间内跟进处理。</p>
+        </details>
+      </div>
+      <div class="bt-contact-card">
+        <h3>联系91逼特逼网</h3>
+        <p>无论你是创作者、合作品牌还是长期观众，我们都愿意认真读完你的来信。</p>
+        <div class="bt-contact-line"><span>合作邮箱</span><span>brand@91bitebi.example</span></div>
+        <div class="bt-contact-line"><span>投稿咨询</span><span>create@91bitebi.example</span></div>
+        <div class="bt-contact-line"><span>媒体联络</span><span>press@91bitebi.example</span></div>
+        <div class="bt-contact-line"><span>工作时间</span><span>周一至周五 10:00–19:00</span></div>
+        <div class="bt-contact-actions">
+          <button class="bt-btn bt-btn-light" data-modal-open="btModalSubmit">投稿入口</button>
+          <button class="bt-btn bt-btn-outline" data-modal-open="btModalShare">分享官网</button>
+          <button class="bt-btn bt-btn-outline" data-modal-open="btModalReport">反馈问题</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bt-footer">
+  <div class="bt-footer-in">
+    <div class="bt-footer-grid">
+      <div class="bt-footer-brand">
+        <h3>91逼特逼<em>网</em></h3>
+        <p>原创影像品牌官方网站，专注真实记录、人物访谈与城市影像，持续运营值得信赖的内容社区，与创作者共同成长。</p>
+      </div>
+      <div class="bt-footer-col">
+        <h4>内容导航</h4>
+        <a href="#bt-focus">焦点视频</a>
+        <a href="#bt-topics">专题企划</a>
+        <a href="#bt-creators">创作者矩阵</a>
+        <a href="#bt-inspire">创作灵感</a>
+      </div>
+      <div class="bt-footer-col">
+        <h4>品牌信息</h4>
+        <a href="#bt-about">品牌故事</a>
+        <a href="#bt-news">企业动态</a>
+        <a href="#bt-faq">帮助中心</a>
+        <a href="#bt-contact">联系我们</a>
+      </div>
+      <div class="bt-footer-col">
+        <h4>社区参与</h4>
+        <a href="#bt-contact" data-modal-open="btModalSubmit">作品投稿</a>
+        <a href="#bt-community">口碑榜单</a>
+        <a href="#bt-contact" data-modal-open="btModalShare">分享官网</a>
+        <a href="#bt-faq">版权说明</a>
+      </div>
+    </div>
+    <div class="bt-footer-bottom">
+      <span>© 2026 91逼特逼网 官方网站 · 版权所有 · 持续运营中</span>
+      <span>品牌主体：91逼特逼网文化传媒有限公司 · 备案号：京ICP备2026000000号-1</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="bt-backtop" id="btBackTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24"><path d="M6 14l6-6 6 6"/></svg>
+</button>
+
+<!-- Toast -->
+<div class="bt-toast" id="btToast" role="status" aria-live="polite"></div>
+
+<!-- 投稿弹窗 -->
+<div class="bt-modal-mask" id="btModalSubmit" role="dialog" aria-modal="true" aria-labelledby="btModalSubmitTitle">
+  <div class="bt-modal">
+    <button class="bt-modal-close" data-modal-close aria-label="关闭">✕</button>
+    <h3 id="btModalSubmitTitle">向91逼特逼网投稿</h3>
+    <p class="bt-modal-sub">填写基本信息，编辑部将在 5 个工作日内联系你。</p>
+    <form id="btSubmitForm">
+      <div class="bt-form-row"><label for="btFName">作者昵称</label><input id="btFName" type="text" placeholder="例如：阿纪" required></div>
+      <div class="bt-form-row"><label for="btFTitle">作品标题</label><input id="btFTitle" type="text" placeholder="给作品起一个具体的名字" required></div>
+      <div class="bt-form-row"><label for="btFType">内容类型</label>
+        <select id="btFType">
+          <option>日常记录</option>
+          <option>人物访谈</option>
+          <option>城市探索</option>
+          <option>创作幕后</option>
+          <option>知识科普</option>
+          <option>户外活动</option>
+        </select>
+      </div>
+      <div class="bt-form-row"><label for="btFDesc">作品简介</label><textarea id="btFDesc" rows="3" placeholder="用两三句话说明拍摄对象与核心内容"></textarea></div>
+      <button class="bt-form-submit" type="submit">提交投稿申请</button>
+    </form>
+  </div>
+</div>
+
+<!-- 分享弹窗 -->
+<div class="bt-modal-mask" id="btModalShare" role="dialog" aria-modal="true" aria-labelledby="btModalShareTitle">
+  <div class="bt-modal">
+    <button class="bt-modal-close" data-modal-close aria-label="关闭">✕</button>
+    <h3 id="btModalShareTitle">分享91逼特逼网</h3>
+    <p class="bt-modal-sub">把喜欢的专题或品牌主页分享给朋友。</p>
+    <div class="bt-share-row">
+      <button class="js-share" data-share="微信">微信</button>
+      <button class="js-share" data-share="微博">微博</button>
+      <button class="js-share" data-share="QQ">QQ</button>
+      <button class="js-share" data-share="朋友圈">朋友圈</button>
+      <button class="js-share" data-share="复制链接" id="btCopyLink">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<!-- 反馈弹窗 -->
+<div class="bt-modal-mask" id="btModalReport" role="dialog" aria-modal="true" aria-labelledby="btModalReportTitle">
+  <div class="bt-modal">
+    <button class="bt-modal-close" data-modal-close aria-label="关闭">✕</button>
+    <h3 id="btModalReportTitle">反馈问题</h3>
+    <p class="bt-modal-sub">描述你遇到的情况，技术支持团队会尽快跟进。</p>
+    <form id="btReportForm">
+      <div class="bt-form-row"><label for="btRType">问题类型</label>
+        <select id="btRType">
+          <option>播放异常</option>
+          <option>页面显示问题</option>
+          <option>账号与投稿</option>
+          <option>内容与版权</option>
+          <option>其他建议</option>
+        </select>
+      </div>
+      <div class="bt-form-row"><label for="btRMsg">详细描述</label><textarea id="btRMsg" rows="4" placeholder="请说明出现问题的页面与操作步骤" required></textarea></div>
+      <div class="bt-form-row"><label for="btRContact">联系方式（选填）</label><input id="btRContact" type="text" placeholder="邮箱或手机号"></div>
+      <button class="bt-form-submit" type="submit">提交反馈</button>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('btToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById('btBurger');
+  var nav = document.getElementById('btNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      nav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* 搜索前端反馈 */
+  var searchForm = document.getElementById('btSearchForm');
+  var searchInput = document.getElementById('btSearchInput');
+  var searchHint = document.getElementById('btSearchHint');
+  var hintTimer = null;
+  function showHint(text){
+    searchHint.textContent = text;
+    searchHint.classList.add('show');
+    clearTimeout(hintTimer);
+    hintTimer = setTimeout(function(){ searchHint.classList.remove('show'); }, 3200);
+  }
+  function doSearch(){
+    var kw = (searchInput.value || '').trim();
+    if(!kw){
+      showHint('请输入影片、创作者或专题关键词');
+      return;
+    }
+    var pool = ['城市夜行','人物访谈','创作幕后','知识科普','治愈影像','慢食记','木作频道','声场实验室'];
+    var hit = pool.filter(function(p){ return p.indexOf(kw) !== -1 || kw.indexOf(p) !== -1; });
+    if(hit.length){
+      showHint('找到与「' + kw + '」相关的 ' + (hit.length + 3) + ' 个内容，正在为你定位…');
+    }else{
+      showHint('暂未匹配到「' + kw + '」，可在专题企划中浏览相近主题');
+    }
+  }
+  searchForm.addEventListener('submit', function(e){ e.preventDefault(); doSearch(); });
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+
+  /* 关键词标签 */
+  var chips = document.querySelectorAll('.bt-chip');
+  for(var c = 0; c < chips.length; c++){
+    chips[c].addEventListener('click', function(){
+      toast('已按「' + this.getAttribute('data-chip') + '」为你标记兴趣，可在专题中继续筛选');
+    });
+  }
+
+  /* 点赞 */
+  var likes = document.querySelectorAll('.js-like');
+  for(var i = 0; i < likes.length; i++){
+    likes[i].addEventListener('click', function(){
+      var numEl = this.querySelector('.js-like-num');
+      var n = parseInt(numEl.textContent.replace(/[^\d]/g,''),10) || 0;
+      if(this.classList.toggle('liked')){
+        numEl.textContent = n + 1;
+      }else{
+        numEl.textContent = Math.max(0, n - 1);
+      }
+    });
+  }
+
+  /* 收藏 */
+  var saves = document.querySelectorAll('.js-save');
+  for(var s = 0; s < saves.length; s++){
+    saves[s].addEventListener('click', function(){
+      var on = this.classList.toggle('saved');
+      toast(on ? '已加入收藏，可在个人页查看' : '已取消收藏');
+    });
+  }
+
+  /* 作者资料弹窗 */
+  var authorBtns = document.querySelectorAll('.js-author');
+  for(var a = 0; a < authorBtns.length; a++){
+    authorBtns[a].addEventListener('click', function(){
+      var name = this.getAttribute('data-author');
+      toast('正在打开「' + name + '」的创作者档案');
+    });
+  }
+
+  /* 弹窗通用 */
+  var modalTriggers = document.querySelectorAll('[data-modal-open]');
+  for(var m = 0; m < modalTriggers.length; m++){
+    modalTriggers[m].addEventListener('click', function(e){
+      e.preventDefault();
+      var id = this.getAttribute('data-modal-open');
+      var box = document.getElementById(id);
+      if(box){ box.classList.add('show'); }
+    });
+  }
+  var closeBtns = document.querySelectorAll('[data-modal-close]');
+  for(var cb = 0; cb < closeBtns.length; cb++){
+    closeBtns[cb].addEventListener('click', function(){
+      this.closest('.bt-modal-mask').classList.remove('show');
+    });
+  }
+  var masks = document.querySelectorAll('.bt-modal-mask');
+  for(var mk = 0; mk < masks.length; mk++){
+    masks[mk].addEventListener('click', function(e){
+      if(e.target === this){ this.classList.remove('show'); }
+    });
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      var open = document.querySelectorAll('.bt-modal-mask.show');
+      for(var k = 0; k < open.length; k++){ open[k].classList.remove('show'); }
+    }
+  });
+
+  /* 投稿表单 */
+  var submitForm = document.getElementById('btSubmitForm');
+  submitForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('btFName').value.trim();
+    var title = document.getElementById('btFTitle').value.trim();
+    if(!name || !title){ toast('请填写作者昵称与作品标题'); return; }
+    document.getElementById('btModalSubmit').classList.remove('show');
+    submitForm.reset();
+    toast('投稿申请已提交，编辑部将在 5 个工作日内联系你');
+  });
+
+  /* 反馈表单 */
+  var reportForm = document.getElementById('btReportForm');
+  reportForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('btModalReport').classList.remove('show');
+    reportForm.reset();
+    toast('反馈已收到，感谢你帮助91逼特逼网变得更好');
+  });
+
+  /* 分享 */
+  var shareBtns = document.querySelectorAll('.js-share');
+  for(var sh = 0; sh < shareBtns.length; sh++){
+    shareBtns[sh].addEventListener('click', function(){
+      var target = this.getAttribute('data-share');
+      if(target === '复制链接'){
+        var url = window.location.href;
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(url).then(function(){
+            toast('链接已复制，欢迎分享给朋友');
+          }).catch(function(){
+            toast('复制失败，请手动复制地址栏链接');
+          });
+        }else{
+          var tmp = document.createElement('textarea');
+          tmp.value = url;
+          document.body.appendChild(tmp);
+          tmp.select();
+          try{ document.execCommand('copy'); toast('链接已复制，欢迎分享给朋友'); }
+          catch(err){ toast('复制失败，请手动复制地址栏链接'); }
+          document.body.removeChild(tmp);
+        }
+        return;
+      }
+      toast('已生成「' + target + '」分享内容，可在对应应用中发送');
+    });
+  }
+
+  /* 回到顶部 */
+  var backTop = document.getElementById('btBackTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ backTop.classList.add('show'); }
+    else{ backTop.classList.remove('show'); }
+  }, {passive:true});
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-count]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return;
+    counted = true;
+    for(var n = 0; n < counters.length; n++){
+      (function(el){
+        var target = parseInt(el.getAttribute('data-count'),10) || 0;
+        var suffix = el.querySelector('i');
+        var suffixHtml = suffix ? suffix.outerHTML : '';
+        var start = null;
+        var dur = 1300;
+        function step(ts){
+          if(!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var val = Math.floor(target * (1 - Math.pow(1 - p, 3)));
+          el.innerHTML = val + suffixHtml;
+          if(p < 1){ requestAnimationFrame(step); }
+          else{ el.innerHTML = target + suffixHtml; }
+        }
+        requestAnimationFrame(step);
+      })(counters[n]);
+    }
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      for(var e = 0; e < entries.length; e++){
+        if(entries[e].isIntersecting){ runCounters(); io.disconnect(); break; }
+      }
+    }, {threshold:.4});
+    var heroStats = document.querySelector('.bt-hero-stats');
+    if(heroStats){ io.observe(heroStats); }
+  }else{
+    runCounters();
+  }
+
+  /* 锚点滚动偏移：预留吸顶高度 */
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('a[href^="#"]');
+    if(!link) return;
+    var href = link.getAttribute('href');
+    if(href === '#' || href.length < 2) return;
+    if(link.hasAttribute('data-modal-open')) return;
+    var target = document.querySelector(href);
+    if(!target) return;
+    e.preventDefault();
+    var sticky = document.querySelector('.bt-sticky-wrap');
+    var offset = sticky ? sticky.offsetHeight : 0;
+    var top = target.getBoundingClientRect().top + window.scrollY - offset - 8;
+    window.scrollTo({top: top < 0 ? 0 : top, behavior:'smooth'});
+    history.replaceState(null, '', href);
+  });
+})();
+</script>
+</body>
+          </html>
